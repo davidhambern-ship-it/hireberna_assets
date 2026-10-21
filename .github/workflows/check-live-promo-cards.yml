@@ -1,0 +1,21 @@
+name: Verify Live Promo Studio Animated Cards
+on:
+  push:
+    paths:
+      - "promo-studio-preview/v3/index.html"
+      - "scripts/check_live_promo_cards.mjs"
+      - ".github/workflows/check-live-promo-cards.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the published site
+        run: curl --fail --location --retry 4 --retry-delay 2 --max-time 25 --silent --show-error https://promostudio.hireberna.app/ --output /tmp/promo-studio-live.html
+      - name: Check published and committed animation code
+        run: node scripts/check_live_promo_cards.mjs
+      - name: Check one published SVG image
+        run: curl --fail --location --retry 3 --max-time 25 --silent --show-error https://raw.githubusercontent.com/davidhambern-ship-it/hireberna_assets/main/promo-studio-assets/cards/artwork-library/base.svg -o /tmp/promo-base.svg
