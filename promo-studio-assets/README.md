@@ -1,39 +1,26 @@
-# Promo Studio — Animated Feature Cards Asset Manifest
+# Promo Studio — Six Animated Feature-Card Asset Packs
 
-**Home:** [Promo Studio asset library](./) · **Machine-readable manifest:** [manifest.json](./manifest.json)  
-**Repository:** davidhambern-ship-it/hireberna_assets · **Version:** 1.0.0
+**[Machine-readable, versioned manifest](./manifest.json)** · **[QA validator](../scripts/validate_promo_assets.py)** · **[All files in GitHub](./cards/)**
 
-The 6 original, illustrated feature cards are **motion-ready layered SVG mini-demos**. Each has a complete idle state and one hover/focus animation. Every card gets its own `base.svg`, independently movable image/UI layers, `motion.css`, accessible interactive `preview.html`, and `README.md`.
+These are the *complete editable visual source kits* for the Welcome page's six feature cards. Every card contains its own illustrated background, independently movable SVG sprites, accessible hover/focus/tap preview, a CSS motion sequence, and source notes.
 
-### Universal design rules
-- Logo-derived palette: electric blue, cyan, violet, orange and crisp white, with soft pastel shading and rounded playful frames.
-- Canvas 600 × 360 px SVG viewBox, scalable to any card; do not rasterize early.
-- Preserve art with `object-fit:contain`; never crop to force a card layout.
-- Animation duration 1.4–1.8s, hover + keyboard focus + optional touch/click support.
-- Honor `prefers-reduced-motion`; the preview must remain readable without animation.
-- All graphics authored for this project; no externally downloaded stock imagery or hidden font files.
-- Card demo previews are **illustrations**, not live claims that AI, video rendering or publishing are operational.
+| Card | Source folder | Files | Story on hover |
+|---|---|---:|---|
+| 1. Artwork Library | [Open asset kit](./cards/artwork-library/) | 13 | Cabinet opens and artwork files fan into a visual gallery |
+| 2. APD Creative Director | [Open asset kit](./cards/apd-director/) | 12 | Copy, image, script and timing pieces assemble into a finished promo concept |
+| 3. Ready-to-Remix Templates | [Open asset kit](./cards/remix-templates/) | 12 | Image, headline, palette and CTA customize the template |
+| 4. Typography Playground | [Open asset kit](./cards/typography-playground/) | 12 | Headline cycles through different type treatments and color variations |
+| 5. Visual Editor | [Open asset kit](./cards/visual-editor/) | 12 | Artwork, text and sticker move along alignment guides into a polished layout |
+| 6. Video Export & Publishing | [Open asset kit](./cards/export-publishing/) | 14 | Render progress fills and video dispatches to four publishing channels |
 
-### Six production packages
-| # | Card | Hover storytelling | Asset bundle |
-|---|---|---|---|
-| 1 | [Artwork Library](./cards/artwork-library/) | Cabinet opens and artwork files fan into a visual gallery | 10 SVG layers + HTML + CSS + README |
-| 2 | [APD Creative Director](./cards/apd-director/) | Copy, image, script and timing pieces assemble into a finished promo concept | 9 SVG layers + HTML + CSS + README |
-| 3 | [Ready-to-Remix Templates](./cards/remix-templates/) | Image, headline, palette and CTA customize the template | 9 SVG layers + HTML + CSS + README |
-| 4 | [Typography Playground](./cards/typography-playground/) | Headline cycles through different type treatments and color variations | 9 SVG layers + HTML + CSS + README |
-| 5 | [Visual Editor](./cards/visual-editor/) | Artwork, text and sticker move along alignment guides into a polished layout | 9 SVG layers + HTML + CSS + README |
-| 6 | [Video Export & Publishing](./cards/export-publishing/) | Render progress fills and video dispatches to four publishing channels | 11 SVG layers + HTML + CSS + README |
+### Total source inventory
+**6 complete card kits · 57 original SVG layers · 6 CSS motion files · 6 playable HTML previews · 6 READMEs = 75 files.**
 
-### QA required before calling a card complete
-1. Every filename in the manifest exists in the repository; links resolve.
-2. SVG files are standalone, use accessible titles, render at 600×360 scene coordinates or an appropriately-sized sprite.
-3. HTML demo references every required layer; zero broken asset paths.
-4. Hover, keyboard and reduced-motion behavior are defined; animation does not overlap the title or body copy when embedded in feature cards.
-5. Compare static + hover states at 600×360 and mobile width before production integration.
-6. Commit each card only after its bundle is complete and verified.
+### Art direction
+Promo Studio logo-inspired visual language: white/lilac canvas, navy outlines, electric blue/cyan, vivid purple, coral and sunny orange. Self-contained scalable vector assets with no licensed stock image dependence and no distributed font files. All layers use the same 600 × 360 coordinate system; noncropping `object-fit:contain` is mandatory.
 
-### Integration
-Embed each package's `preview.html` as a design QA reference; the production site can use its `motion.css` and asset layers directly in the feature card art area. Do **not** replace or deploy the live site until the card transitions have been reviewed.
+### QA and behavior
+Each `preview.html` is a self-contained local demo. Hover or focus shows the full 1.55-second animation; tap toggles the active state. The project includes an automated [GitHub Actions verification](https://github.com/davidhambern-ship-it/hireberna_assets/actions/workflows/validate-promo-studio-assets.yml) that parses all SVG XML files, checks every referenced layer, checks reduced-motion handling and asserts the exact inventory count. **Browser visual acceptance and integration on the live Promo Studio landing page are still separate steps.**
 
-### Authored source / maintenance
-The SVGs and animation code are the editable source. Change a sprite or its motion transform independently; don't repaint a flattened screenshot. Update `manifest.json` after each card's QA/commit.
+### Integration approach
+Do not publish a flattened screenshot as a replacement for these assets. Each feature card should embed its SVG layers and `motion.css`, with the title/description below the animated art so motion doesn't obscure text. Copy assets into the site build or publish them through an asset host; the current Cloudflare website is unchanged by adding this library.

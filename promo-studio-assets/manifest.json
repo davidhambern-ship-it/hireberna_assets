@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "project": "Promo Studio — Animated Feature Card Asset Library",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "canonical_repo": "https://github.com/davidhambern-ship-it/hireberna_assets",
   "root": "promo-studio-assets",
   "source_of_truth": "promo-studio-assets/manifest.json",
@@ -77,11 +77,11 @@
         "upload indicator lights",
         "assets settle in a gallery"
       ],
-      "status": "planned",
+      "status": "source-complete",
       "qa": {
-        "assets_valid": false,
+        "assets_valid": true,
         "preview_tested": false,
-        "github_verified": false
+        "github_verified": true
       }
     },
     {
@@ -114,11 +114,11 @@
         "assembled promo frame emerges",
         "timeline locks into place"
       ],
-      "status": "planned",
+      "status": "source-complete",
       "qa": {
-        "assets_valid": false,
+        "assets_valid": true,
         "preview_tested": false,
-        "github_verified": false
+        "github_verified": true
       }
     },
     {
@@ -152,11 +152,11 @@
         "colors shift",
         "customized composition locks"
       ],
-      "status": "planned",
+      "status": "source-complete",
       "qa": {
-        "assets_valid": false,
+        "assets_valid": true,
         "preview_tested": false,
-        "github_verified": false
+        "github_verified": true
       }
     },
     {
@@ -189,11 +189,11 @@
         "selector slides",
         "chosen text rests bold"
       ],
-      "status": "planned",
+      "status": "source-complete",
       "qa": {
-        "assets_valid": false,
+        "assets_valid": true,
         "preview_tested": false,
-        "github_verified": false
+        "github_verified": true
       }
     },
     {
@@ -227,11 +227,11 @@
         "sticker rotates",
         "finished layout holds"
       ],
-      "status": "planned",
+      "status": "source-complete",
       "qa": {
-        "assets_valid": false,
+        "assets_valid": true,
         "preview_tested": false,
-        "github_verified": false
+        "github_verified": true
       }
     },
     {
@@ -267,12 +267,18 @@
         "channel indicators light up",
         "success appears"
       ],
-      "status": "planned",
+      "status": "source-complete",
       "qa": {
-        "assets_valid": false,
+        "assets_valid": true,
         "preview_tested": false,
-        "github_verified": false
+        "github_verified": true
       }
     }
-  ]
+  ],
+  "verification": {
+    "source_inventory": "75/75 present in GitHub (57 independent SVG layers + 18 implementation/demo files)",
+    "method": "GitHub recursive tree check; XML validation with GitHub Actions",
+    "visual_review": "pending browser rendering and UX review before live deployment",
+    "built_at": "2026-10-21"
+  }
 }

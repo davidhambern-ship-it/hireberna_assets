@@ -1,0 +1,17 @@
+name: Validate Promo Studio Card Assets
+on:
+  push:
+    paths:
+      - 'promo-studio-assets/**'
+      - '.github/workflows/validate-promo-studio-assets.yml'
+      - 'scripts/validate_promo_assets.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify SVG assets and preview files
+        run: python3 scripts/validate_promo_assets.py
