@@ -1,0 +1,20 @@
+/* Promo Studio: APD Creative Director */
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#161A33;font-family:system-ui,sans-serif}.wrap{max-width:720px;margin:25px auto;padding:20px}.wrap h1{font-size:25px}.wrap p{color:#66718B}.anim-card{display:block;width:100%;aspect-ratio:5/3;position:relative;isolation:isolate;overflow:hidden;border:3px solid #282B6B;border-radius:30px;background:#F8F8FF;cursor:pointer;box-shadow:10px 11px 0 #DCDDFC;outline-offset:6px}.anim-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none;transition:transform 1.55s cubic-bezier(.2,.8,.2,1),opacity .6s ease;will-change:transform,opacity}
+.anim-card .layer-base{z-index:1;opacity:1;transform:none;transform-origin:center}
+.anim-card .layer-director-core{z-index:2;opacity:1;transform:none;transform-origin:center}
+.anim-card .layer-idea{z-index:3;opacity:1;transform:translate(-115px,-75px) rotate(-8deg);transform-origin:center}
+.anim-card .layer-image{z-index:4;opacity:1;transform:translate(177px,-78px) rotate(7deg);transform-origin:center}
+.anim-card .layer-copy{z-index:5;opacity:1;transform:translate(-111px,76px) rotate(-5deg);transform-origin:center}
+.anim-card .layer-timeline{z-index:6;opacity:1;transform:translate(174px,84px) rotate(6deg);transform-origin:center}
+.anim-card .layer-promo-frame{z-index:7;opacity:0;transform:scale(.7);transform-origin:center}
+.anim-card .layer-beam{z-index:8;opacity:0;transform:none;transform-origin:center}
+.anim-card .layer-sparkles{z-index:9;opacity:0;transform:none;transform-origin:center}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-director-core{opacity:0;transform:scale(.7);transition-delay:0.00s}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-idea{opacity:0;transform:translate(-4px,-2px) scale(.6);transition-delay:0.06s}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-image{opacity:0;transform:translate(4px,-4px) scale(.6);transition-delay:0.11s}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-copy{opacity:0;transform:translate(2px,4px) scale(.6);transition-delay:0.17s}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-timeline{opacity:0;transform:translate(5px,2px) scale(.6);transition-delay:0.22s}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-promo-frame{opacity:1;transform:scale(1);transition-delay:0.28s}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-beam{opacity:1;transform:scale(1);transition-delay:0.33s}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-sparkles{opacity:1;transform:scale(1);transition-delay:0.39s}
+@media(prefers-reduced-motion:reduce){.anim-card img{transition:none!important;animation:none!important;will-change:auto}}
