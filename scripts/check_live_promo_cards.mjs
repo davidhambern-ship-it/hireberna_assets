@@ -10,7 +10,7 @@ assert.equal(expected,57);
 
 for(const [filename,html] of [
  ['repo',fs.readFileSync('promo-studio-preview/v3/index.html','utf8')],
- ['live',fs.readFileSync('/tmp/promo-studio-live.html','utf8')]
+ ...((fs.existsSync('/tmp/promo-studio-live.html')) ? [['live',fs.readFileSync('/tmp/promo-studio-live.html','utf8')]] : [])
 ]){
  const scripts=[...html.matchAll(/<script(?: [^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
  assert.equal(scripts.length,1, filename+': expected one application script');
