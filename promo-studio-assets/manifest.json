@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": "Promo Studio — Animated Feature Card Asset Library",
+  "version": "1.0.0",
+  "canonical_repo": "https://github.com/davidhambern-ship-it/hireberna_assets",
+  "root": "promo-studio-assets",
+  "source_of_truth": "promo-studio-assets/manifest.json",
+  "design": {
+    "canvas": {
+      "width": 600,
+      "height": 360
+    },
+    "demo": {
+      "width": 600,
+      "height": 360
+    },
+    "target_card_aspect": "5:3",
+    "colors": {
+      "ink": "#15172B",
+      "blue": "#276AF3",
+      "cyan": "#19BFE9",
+      "purple": "#7546ED",
+      "orange": "#FF9C33",
+      "pink": "#F46CA8",
+      "paper": "#FFFFFF",
+      "cream": "#FFF8ED"
+    },
+    "fonts": [
+      "Fredoka",
+      "Nunito Sans",
+      "system-ui"
+    ],
+    "format": "SVG for individual visual layers; CSS keyframe animations; accessible HTML previews"
+  },
+  "implementation": {
+    "animation_trigger": "hover, focus-within and keyboard focus; touch toggle by click",
+    "reduced_motion": "prefers-reduced-motion disables transitions",
+    "duration_seconds": "1.4–1.8",
+    "layout": "Layers remain independent for hover animation. No image cropping.",
+    "no_outside_dependencies": true,
+    "asset_license": "Original authored assets for the Promo Studio product, with platform names used only as descriptive badges."
+  },
+  "card_shared_files": [
+    "preview.html",
+    "motion.css",
+    "README.md"
+  ],
+  "cards": [
+    {
+      "id": "01",
+      "slug": "artwork-library",
+      "title": "Artwork Library",
+      "theme": "cyan",
+      "path": "promo-studio-assets/cards/artwork-library/",
+      "visual_layers": [
+        "base.svg",
+        "folder-closed.svg",
+        "folder-open.svg",
+        "art-landscape.svg",
+        "art-portrait.svg",
+        "art-sticker.svg",
+        "art-logo.svg",
+        "upload.svg",
+        "cursor.svg",
+        "sparkles.svg"
+      ],
+      "shared_files": [
+        "preview.html",
+        "motion.css",
+        "README.md"
+      ],
+      "rest_state": "Closed digital art cabinet with artwork catalog",
+      "hover_state": "Cabinet opens and artwork files fan into a visual gallery",
+      "motion_sequence": [
+        "cabinet opens",
+        "four artwork files fan out",
+        "upload indicator lights",
+        "assets settle in a gallery"
+      ],
+      "status": "planned",
+      "qa": {
+        "assets_valid": false,
+        "preview_tested": false,
+        "github_verified": false
+      }
+    },
+    {
+      "id": "02",
+      "slug": "apd-director",
+      "title": "APD Creative Director",
+      "theme": "purple",
+      "path": "promo-studio-assets/cards/apd-director/",
+      "visual_layers": [
+        "base.svg",
+        "director-core.svg",
+        "idea.svg",
+        "image.svg",
+        "copy.svg",
+        "timeline.svg",
+        "promo-frame.svg",
+        "beam.svg",
+        "sparkles.svg"
+      ],
+      "shared_files": [
+        "preview.html",
+        "motion.css",
+        "README.md"
+      ],
+      "rest_state": "Storyboard workstation with scattered creative inputs",
+      "hover_state": "Copy, image, script and timing pieces assemble into a finished promo concept",
+      "motion_sequence": [
+        "creative tiles converge",
+        "director core pulses",
+        "assembled promo frame emerges",
+        "timeline locks into place"
+      ],
+      "status": "planned",
+      "qa": {
+        "assets_valid": false,
+        "preview_tested": false,
+        "github_verified": false
+      }
+    },
+    {
+      "id": "03",
+      "slug": "remix-templates",
+      "title": "Ready-to-Remix Templates",
+      "theme": "orange",
+      "path": "promo-studio-assets/cards/remix-templates/",
+      "visual_layers": [
+        "base.svg",
+        "template-blank.svg",
+        "template-ready.svg",
+        "user-image.svg",
+        "headline.svg",
+        "cta.svg",
+        "palette.svg",
+        "cursor.svg",
+        "sparkles.svg"
+      ],
+      "shared_files": [
+        "preview.html",
+        "motion.css",
+        "README.md"
+      ],
+      "rest_state": "Editable blank template with placeholders",
+      "hover_state": "Image, headline, palette and CTA customize the template",
+      "motion_sequence": [
+        "template flips",
+        "artwork arrives",
+        "headline and CTA populate",
+        "colors shift",
+        "customized composition locks"
+      ],
+      "status": "planned",
+      "qa": {
+        "assets_valid": false,
+        "preview_tested": false,
+        "github_verified": false
+      }
+    },
+    {
+      "id": "04",
+      "slug": "typography-playground",
+      "title": "Typography Playground",
+      "theme": "pink",
+      "path": "promo-studio-assets/cards/typography-playground/",
+      "visual_layers": [
+        "base.svg",
+        "type-modern.svg",
+        "type-serif.svg",
+        "type-bold.svg",
+        "chip-modern.svg",
+        "chip-serif.svg",
+        "chip-bold.svg",
+        "selector.svg",
+        "sparkles.svg"
+      ],
+      "shared_files": [
+        "preview.html",
+        "motion.css",
+        "README.md"
+      ],
+      "rest_state": "Type specimen wall and selector chips",
+      "hover_state": "Headline cycles through different type treatments and color variations",
+      "motion_sequence": [
+        "font samples cycle",
+        "weight/size expand",
+        "selector slides",
+        "chosen text rests bold"
+      ],
+      "status": "planned",
+      "qa": {
+        "assets_valid": false,
+        "preview_tested": false,
+        "github_verified": false
+      }
+    },
+    {
+      "id": "05",
+      "slug": "visual-editor",
+      "title": "Visual Editor",
+      "theme": "blue",
+      "path": "promo-studio-assets/cards/visual-editor/",
+      "visual_layers": [
+        "base.svg",
+        "artwork.svg",
+        "headline.svg",
+        "sticker.svg",
+        "guides.svg",
+        "handles.svg",
+        "cursor.svg",
+        "finish.svg",
+        "sparkles.svg"
+      ],
+      "shared_files": [
+        "preview.html",
+        "motion.css",
+        "README.md"
+      ],
+      "rest_state": "Mini editing canvas with unsorted objects",
+      "hover_state": "Artwork, text and sticker move along alignment guides into a polished layout",
+      "motion_sequence": [
+        "alignment guides appear",
+        "photo slides",
+        "headline snaps",
+        "sticker rotates",
+        "finished layout holds"
+      ],
+      "status": "planned",
+      "qa": {
+        "assets_valid": false,
+        "preview_tested": false,
+        "github_verified": false
+      }
+    },
+    {
+      "id": "06",
+      "slug": "export-publishing",
+      "title": "Video Export & Publishing",
+      "theme": "amber",
+      "path": "promo-studio-assets/cards/export-publishing/",
+      "visual_layers": [
+        "base.svg",
+        "video.svg",
+        "mp4.svg",
+        "progress-track.svg",
+        "progress-fill.svg",
+        "send-arrow.svg",
+        "youtube.svg",
+        "instagram.svg",
+        "facebook.svg",
+        "tiktok.svg",
+        "check.svg"
+      ],
+      "shared_files": [
+        "preview.html",
+        "motion.css",
+        "README.md"
+      ],
+      "rest_state": "Video export desk with MP4 file and platform destinations",
+      "hover_state": "Render progress fills and video dispatches to four publishing channels",
+      "motion_sequence": [
+        "render progress reaches 100%",
+        "MP4 appears",
+        "send arrow travels",
+        "channel indicators light up",
+        "success appears"
+      ],
+      "status": "planned",
+      "qa": {
+        "assets_valid": false,
+        "preview_tested": false,
+        "github_verified": false
+      }
+    }
+  ]
+}
