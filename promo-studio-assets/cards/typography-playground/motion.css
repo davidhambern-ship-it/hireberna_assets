@@ -1,0 +1,21 @@
+/* Promo Studio · Typography Playground · independent motion layers */
+*{box-sizing:border-box}body{margin:0;background:white;color:#15172B;font-family:system-ui,sans-serif}.wrap{max-width:720px;margin:20px auto;padding:24px}h1{font-size:24px;margin:0 0 12px}p{color:#626B86;line-height:1.5}.anim-card{display:block;width:100%;aspect-ratio:5/3;position:relative;isolation:isolate;overflow:hidden;background:#F6F8FF;border:3px solid #252B68;border-radius:30px;box-shadow:10px 11px 0 #DCE2FC;cursor:pointer;outline-offset:6px}.anim-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;pointer-events:none;user-select:none;transition:opacity .55s ease,transform 1.55s cubic-bezier(.2,.8,.2,1);will-change:transform,opacity}
+.anim-card .layer-base{z-index:1;opacity:1;transform:none;transform-origin:center}
+.anim-card .layer-type-modern{z-index:2;opacity:1;transform:none;transform-origin:center}
+.anim-card .layer-type-serif{z-index:3;opacity:0;transform:none;transform-origin:center}
+.anim-card .layer-type-bold{z-index:4;opacity:0;transform:none;transform-origin:center}
+.anim-card .layer-chip-modern{z-index:5;opacity:1;transform:none;transform-origin:center}
+.anim-card .layer-chip-serif{z-index:6;opacity:1;transform:none;transform-origin:center}
+.anim-card .layer-chip-bold{z-index:7;opacity:1;transform:none;transform-origin:center}
+.anim-card .layer-selector{z-index:8;opacity:1;transform:none;transform-origin:center}
+.anim-card .layer-sparkles{z-index:9;opacity:0;transform:none;transform-origin:center}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-selector{opacity:1;transform:translateY(100px);transition-delay:0.00s}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-sparkles{opacity:1;transform:scale(1);transition-delay:0.07s}
+
+@keyframes modern-cycle{0%,22%{opacity:1}32%,100%{opacity:0}}
+@keyframes serif-cycle{0%,25%{opacity:0}35%,55%{opacity:1}65%,100%{opacity:0}}
+@keyframes bold-cycle{0%,58%{opacity:0}72%,100%{opacity:1}}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-type-modern{animation:modern-cycle 1.55s forwards}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-type-serif{animation:serif-cycle 1.55s forwards}
+:is(.anim-card:hover,.anim-card:focus-visible,.anim-card.is-active) .layer-type-bold{animation:bold-cycle 1.55s forwards}
+@media(prefers-reduced-motion:reduce){.anim-card img{transition:none!important;animation:none!important;will-change:auto}}
